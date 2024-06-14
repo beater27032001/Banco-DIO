@@ -1,22 +1,22 @@
 public class Main {
     public static void main(String[] args) {
-        Cliente igo = new Cliente("Igo", "303.160.410-50");
-        Cliente camila = new Cliente("camila", "572.430.090-77");
+        Cliente jose = new Cliente("José Carlos", "11111111111");
+        Cliente clara = new Cliente("Clara Vitória", "22222222222");
 
-        Conta constaPoupancaIgo = new ContaPoupanca(igo);
-        Conta constaPoupancaCamila = new ContaPoupanca(camila);
+        Conta constaPoupancaJose = new ContaPoupanca(jose);
+        Conta constaPoupancaClara = new ContaPoupanca(clara);
 
-        constaPoupancaIgo.depositar(100);
-        constaPoupancaCamila.depositar(50);
+        constaPoupancaJose.depositar(500);
+        constaPoupancaClara.depositar(100);
 
         try {
-            constaPoupancaIgo.transferir(1, constaPoupancaCamila);
+            constaPoupancaJose.transferir(1, constaPoupancaClara);
         }catch (ValorSaqueInvalidoException | SaldoInsuficienteException e){
             System.out.println(e.getMessage());
         }
 
 
-        System.out.println(constaPoupancaIgo);
-        System.out.println(constaPoupancaCamila);
+        System.out.println(constaPoupancaJose);
+        System.out.println(constaPoupancaClara);
     }
 }
